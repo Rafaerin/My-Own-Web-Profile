@@ -1,0 +1,366 @@
+/* --- CSS GLOBAL: CHINESE MINIMALIST STYLE (DARK MONOCHROME EDITION) --- */
+:root {
+    --bg-color: #121316;        /* Warna dasar tinta arang gelap (agar salju putih menyala) */
+    --card-bg: #1c1e22;         /* Kotak abu-abu arang matte yang solid */
+    --text-main: #f0f2f5;       /* Teks putih gading yang bersih */
+    --text-sub: #9ca3af;        /* Abu-abu silver untuk teks sekunder */
+    --accent-red: #c93b3b;      /* Warna merah stempel vermilion yang kontras */
+    --border-line: rgba(255, 255, 255, 0.12); /* Garis batas tipis hairline */
+    --box-placeholder: #252830; /* Warna latar bingkai foto/galeri */
+    --font-serif: "Georgia", "Songti SC", "SimSun", serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-serif);
+    line-height: 1.8;
+    padding: 40px 20px;
+  }
+  
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  
+  /* --- HEADER & NAVIGASI --- */
+  header {
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--border-line);
+  }
+  
+  .seal-tag {
+    display: inline-block;
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    background: rgba(201, 59, 59, 0.08);
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: normal;
+    margin-bottom: 6px;
+    color: #ffffff;
+  }
+  
+  .site-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    letter-spacing: 3px;
+    font-family: var(--font-sans);
+    margin-bottom: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border-line);
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--text-sub);
+    transition: color 0.2s ease;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    color: var(--accent-red);
+    font-weight: 600;
+  }
+  
+  /* --- KONTEN UMUM --- */
+  .page-title {
+    font-size: 1.4rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--accent-red);
+    padding-left: 12px;
+    color: #ffffff;
+  }
+  
+  .intro-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-line);
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* --- PROFILE PAGE STYLES --- */
+  .profile-wrap {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .profile-photo {
+    width: 220px;
+    height: 280px;
+    background-color: var(--box-placeholder);
+    border: 1px solid var(--border-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .profile-info {
+    flex: 1;
+    min-width: 260px;
+  }
+  
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .info-table td {
+    padding: 8px 4px;
+    border-bottom: 1px dashed var(--border-line);
+    font-size: 0.95rem;
+  }
+  
+  .info-table td.label {
+    width: 30%;
+    color: var(--text-sub);
+  }
+  
+  /* --- HOBBY PAGE STYLES --- */
+  .hobby-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .hobby-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-line);
+    padding: 24px;
+  }
+  
+  .hobby-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--accent-red);
+    font-weight: normal;
+  }
+  
+  /* --- GALLERY PAGE STYLES --- */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-line);
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .gallery-box {
+    width: 100%;
+    height: 180px;
+    background: var(--box-placeholder);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sub);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+  
+  .gallery-caption {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+  }
+  
+  /* --- FOOTER --- */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-line);
+    font-size: 0.8rem;
+    color: var(--text-sub);
+    letter-spacing: 1px;
+  }
+  
+  /* --- BIOGRAPHY DENGAN FOTO MELEBUR (ALA REFERENSI TIARA) --- */
+  .bio-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-line);
+    padding: 32px 36px;
+    margin-bottom: 36px;
+  }
+  
+  .bio-top-merge {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  
+  .bio-photo-frame {
+    width: 200px;
+    min-width: 200px;
+    height: 260px;
+    background-color: var(--box-placeholder);
+    border: 1px solid var(--border-line);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sub);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  
+  .bio-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .bio-intro-content {
+    flex: 1;
+  }
+  
+  @media (max-width: 650px) {
+    .bio-top-merge {
+      flex-direction: column;
+      align-items: center;
+    }
+    .bio-photo-frame {
+      width: 180px;
+      height: 240px;
+    }
+  }
+  
+  .bio-part {
+    margin-bottom: 24px;
+  }
+  
+  .bio-part:last-child {
+    margin-bottom: 0;
+  }
+  
+  .bio-part-title {
+    font-size: 0.95rem;
+    color: var(--accent-red);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--border-line);
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+  
+  .bio-part p,
+  .bio-intro-content p {
+    color: var(--text-main);
+    font-size: 0.96rem;
+    line-height: 1.85;
+    text-align: justify;
+    margin-bottom: 14px;
+  }
+  
+  .bio-part p:last-child,
+  .bio-intro-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* --- LOADING PRELOADER --- */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+  
+  #preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .preloader-seal {
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    background: rgba(201, 59, 59, 0.08);
+  }
+  
+  .preloader-number {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--text-main);
+    letter-spacing: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .preloader-bar-track {
+    width: 140px;
+    height: 2px;
+    background: var(--border-line);
+    margin-top: 14px;
+    overflow: hidden;
+  }
+  
+  .preloader-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--accent-red);
+    transition: width 0.05s linear;
+  }
+  
+  /* --- EFEK SALJU GLOBAL --- */
+  #snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+  }
